@@ -36,14 +36,14 @@ namespace C0reExternalBase_v2.Threads
                 LocalPlayer.m_iClientState = ManageMemory.ReadMemory<int>(Offsets.m_EnginePointer + Offsets.dwClientState);
                 LocalPlayer.m_iGlowBase = ManageMemory.ReadMemory<int>(Offsets.m_ClientPointer + Offsets.dwGlowObjectManager);
                 LocalPlayer.m_iJumpFlags = ManageMemory.ReadMemory<int>(LocalPlayer.m_iBase + Offsets.m_fFlags);
-                LocalPlayer.m_angEyeAngles = ManageMemory.ReadMemory<QAngle>(LocalPlayer.m_iBase + Offsets.m_angEyeAngles);
+                LocalPlayer.m_angEyeAngles = ManageMemory.ReadMemory<QAngle>(LocalPlayer.m_iClientState + Offsets.m_angEyeAngles);
                 LocalPlayer.m_VecOrigin = ManageMemory.ReadMemory<Vector3D>(LocalPlayer.m_iBase + Offsets.m_vecOrigin);
                 LocalPlayer.m_weaponType = ManageMemory.ReadMemory<int>(LocalPlayer.m_iBase + Offsets.m_hActiveWeapon);
 
                 LocalPlayer.fFlashDuration = ManageMemory.ReadMemory<float>(LocalPlayer.m_iBase + Offsets.m_flFlashDuration);
                 LocalPlayer.m_fFlashAlpha = ManageMemory.ReadMemory<float>(LocalPlayer.m_iBase + Offsets.m_flFlashMaxAlpha);
 
-                LocalPlayer.Arrays.ViewMatrix = ManageMemory.ReadMatrix<float>(Offsets.m_ClientPointer + Offsets.m_dwViewMatrix, 16);
+                LocalPlayer.Arrays.ViewMatrix = ManageMemory.ReadMatrix<float>(Offsets.m_ClientPointer + Offsets.dwViewMatrix, 16);
                 //ENTITY
                 for (var i = 0; i < 64; i++)
                 {

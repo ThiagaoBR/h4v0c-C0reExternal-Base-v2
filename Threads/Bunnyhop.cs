@@ -17,9 +17,9 @@ namespace C0reExternalBase_v2.Threads
                 if (Settings.m_bBunnyhop && KEY_SPACEBAR_STATE)
                 {
                     if (LocalPlayer.m_iJumpFlags == 257 || LocalPlayer.m_iJumpFlags == 263)
-                        ManageMemory.WriteMemory<int>(Offsets.m_ClientPointer + Offsets.m_dwForceJump, 5);
+                        ManageMemory.WriteMemory<int>(Offsets.m_ClientPointer + Offsets.dwForceJump, 5);
                     else
-                        ManageMemory.WriteMemory<int>(Offsets.m_ClientPointer + Offsets.m_dwForceJump, 4);
+                        ManageMemory.WriteMemory<int>(Offsets.m_ClientPointer + Offsets.dwForceJump, 4);
                 }
                 Thread.Sleep(2);
             }

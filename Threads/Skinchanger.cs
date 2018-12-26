@@ -32,7 +32,7 @@ namespace C0reExternalBase_v2.Threads
                         int iCurWeaponAdress = (ManageMemory.ReadMemory<int>(LocalPlayer.m_iBase + Offsets.m_hMyWeapons + (i - 1) * 0x4)) & 0xFFF;
 
                         // Get Baseadress of The Current Weapon
-                        Weapon.m_iBase = ManageMemory.ReadMemory<int>(Offsets.m_ClientPointer + Offsets.m_dwEntityList + (iCurWeaponAdress - 1) * 0x10);
+                        Weapon.m_iBase = ManageMemory.ReadMemory<int>(Offsets.m_ClientPointer + Offsets.dwEntityList + (iCurWeaponAdress - 1) * 0x10);
 
                         // Get The WeaponID
                         Weapon.m_iItemDefinitionIndex = ManageMemory.ReadMemory<int>(Weapon.m_iBase + Offsets.m_iItemDefinitionIndex);
@@ -92,7 +92,7 @@ namespace C0reExternalBase_v2.Threads
                         if (Weapon.m_iTexture != OverrideTexture && OverrideTexture != 1337)
                         {
                             // Set New Item Values
-                            ManageMemory.WriteMemory<int>(Weapon.m_iBase + Offsets.m_iItemIDLow, -1);
+                            ManageMemory.WriteMemory<int>(Weapon.m_iBase + Offsets.m_iItemIDHigh, -1);
                             ManageMemory.WriteMemory<int>(Weapon.m_iBase + Offsets.m_nFallbackPaintKit, OverrideTexture);
                             ManageMemory.WriteMemory<int>(Weapon.m_iBase + Offsets.m_nFallbackSeed, 661);
                             ManageMemory.WriteMemory<int>(Weapon.m_iBase + Offsets.m_nFallbackStatTrak, 1337);
