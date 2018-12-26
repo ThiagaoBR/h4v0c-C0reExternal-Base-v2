@@ -182,21 +182,6 @@ namespace C0reExternalBase_v2
             //m_ClientPointer = ManageMemory.GetModuleAdress("client");
             m_EnginePointer = ManageMemory.GetModuleAdress("engine");
 
-            int player = ManageMemory.ReadMemory<int>(m_ClientPointer + Offsets.m_dwLocalPlayer);
-
-
-
-
-            //int flashDuration = ManageMemory.ReadMemory<int>(player + Offsets.m_flFlashDuration);
-            //if (flashDuration != 0)
-            //{
-            //    ManageMemory.WriteMemory<int>(player + Offsets.m_flFlashDuration, 0);
-            //}
-
-
-
-
-
             for (var i = 0; i < 64; i++)
                 Arrays.Entity[i] = new Entity();
         }

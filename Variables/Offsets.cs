@@ -131,21 +131,21 @@ namespace C0reExternalBase_v2.Variables
         public const Int32 m_yawClassPtr = 0xCC2E60;
         public const Int32 model_ambient_min = 0x58ED1C;
 
-        // NETVARS
-        //public static int m_dwLocalPlayer = 0x00AB2704;
-        public static int m_dwLocalPlayer = 0x00AA8FBC;
-        public static int m_dwClientState = 0x059E21C;
-        public static int m_dwGlowObject = 0x04FA2388;
-        public static int m_dwEntityList = 0x04A87504;
-        public static int m_angEyeAngles = 0x0000AA08;
-        public static int m_dwViewMatrix = 0x4A76E32;
-        public static int m_iCrossHairID = 0x0000B2B4;
-        public static int m_dwForceJump = 0x4F1C364;
+        //// NETVARS
+        ////public static int m_dwLocalPlayer = 0x00AB2704;
+        //public static int m_dwLocalPlayer = 0x00AA8FBC;
+        //public static int m_dwClientState = 0x059E21C;
+        //public static int m_dwGlowObject = 0x04FA2388;
+        //public static int m_dwEntityList = 0x04A87504;
+        //public static int m_angEyeAngles = 0x0000AA08;
+        //public static int m_dwViewMatrix = 0x4A76E32;
+        //public static int m_iCrossHairID = 0x0000B2B4;
+        //public static int m_dwForceJump = 0x4F1C364;
 
 
-        public static int m_iItemIDLow = 0x2FA4;
-        public static int m_vecMins = 0x0320;
-        public static int m_vecMaxs = 0x032C;
+        //public static int m_iItemIDLow = 0x2FA4;
+        //public static int m_vecMins = 0x0320;
+        //public static int m_vecMaxs = 0x032C;
 
 
 

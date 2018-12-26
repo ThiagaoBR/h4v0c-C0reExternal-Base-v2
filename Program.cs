@@ -15,7 +15,7 @@ namespace C0reExternalBase_v2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             var form = new RenderForm();
-            //MessagePump.Run(form, form.RenderFrame);
+            
         }
     }
 }

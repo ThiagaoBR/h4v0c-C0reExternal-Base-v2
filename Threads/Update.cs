@@ -30,7 +30,6 @@ namespace C0reExternalBase_v2.Threads
             {
                 //LOCAL
                 LocalPlayer.m_iBase = ManageMemory.ReadMemory<int>(Offsets.m_ClientPointer + Offsets.dwLocalPlayer);
-                //LocalPlayer.m_iBase = ManageMemory.ReadMemory<int>(Offsets.dwLocalPlayer);
 
 
                 LocalPlayer.m_iTeam = ManageMemory.ReadMemory<int>(LocalPlayer.m_iBase + Offsets.m_iTeamNum);
@@ -40,19 +39,11 @@ namespace C0reExternalBase_v2.Threads
                 LocalPlayer.m_angEyeAngles = ManageMemory.ReadMemory<QAngle>(LocalPlayer.m_iBase + Offsets.m_angEyeAngles);
                 LocalPlayer.m_VecOrigin = ManageMemory.ReadMemory<Vector3D>(LocalPlayer.m_iBase + Offsets.m_vecOrigin);
                 LocalPlayer.m_weaponType = ManageMemory.ReadMemory<int>(LocalPlayer.m_iBase + Offsets.m_hActiveWeapon);
-                //LocalPlayer.m_weaponType = ManageMemory.ReadMemory<int>(LocalPlayer.m_weaponType + Offsets.m_iItemDefinitionIndex);
 
                 LocalPlayer.fFlashDuration = ManageMemory.ReadMemory<float>(LocalPlayer.m_iBase + Offsets.m_flFlashDuration);
                 LocalPlayer.m_fFlashAlpha = ManageMemory.ReadMemory<float>(LocalPlayer.m_iBase + Offsets.m_flFlashMaxAlpha);
 
                 LocalPlayer.Arrays.ViewMatrix = ManageMemory.ReadMatrix<float>(Offsets.m_ClientPointer + Offsets.m_dwViewMatrix, 16);
-
-                var tipoArma = (CSWeaponType)LocalPlayer.m_weaponType;
-
-                Console.WriteLine("arma atual : " + LocalPlayer.m_weaponType);
-                
-
-
                 //ENTITY
                 for (var i = 0; i < 64; i++)
                 {
@@ -68,7 +59,6 @@ namespace C0reExternalBase_v2.Threads
 
                         Entity.m_iTeam = ManageMemory.ReadMemory<int>(Entity.m_iBase + Offsets.m_iTeamNum);
                         Entity.m_iHealth = ManageMemory.ReadMemory<int>(Entity.m_iBase + Offsets.m_iHealth);
-                        //Entity.m_iDormant = ManageMemory.ReadMemory<int>(Entity.m_iBase + Offsets.m_d);
                         Entity.m_iGlowIndex = ManageMemory.ReadMemory<int>(Entity.m_iBase + Offsets.m_iGlowIndex);
 
                         Entity.m_iTipoArma = ManageMemory.ReadMemory<int>(Entity.m_iBase + Offsets.m_hActiveWeapon);
