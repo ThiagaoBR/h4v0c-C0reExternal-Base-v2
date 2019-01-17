@@ -79,7 +79,6 @@ namespace C0reExternalBase_v2.Variables
         public const Int32 m_vecViewOffset = 0x108;
         public const Int32 m_viewPunchAngle = 0x3020;
 
-
         public const Int32 clientstate_choked_commands = 0x4CB0;
         public const Int32 clientstate_delta_ticks = 0x174;
         public const Int32 clientstate_last_outgoing_command = 0x4CAC;
