@@ -4,6 +4,7 @@ namespace C0reExternalBase_v2.Variables
 {
     class Offsets
     {
+
         public static int m_ClientPointer;
         public static int m_EnginePointer;
 
