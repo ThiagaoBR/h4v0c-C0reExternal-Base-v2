@@ -192,9 +192,9 @@ namespace C0reExternalBase_v2
             Thread Updater = new Thread(Update.Read);
             Updater.Start();
 
-            //Bunnyhop Bunnyhop = new Bunnyhop();
-            //Thread Hopper = new Thread(Bunnyhop.Jump);
-            //Hopper.Start();
+            Bunnyhop Bunnyhop = new Bunnyhop();
+            Thread Hopper = new Thread(Bunnyhop.Jump);
+            Hopper.Start();
 
             Triggerbot Triggerbot = new Triggerbot();
             Thread Trigger = new Thread(Triggerbot.Trigger);
